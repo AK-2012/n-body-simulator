@@ -2,7 +2,9 @@
 A Python implementation of an N-body gravitational simulation.
 
 ## Overview
+This project is a Python implementation of an N-body gravitational simulator that models the interactions between multiple bodies using Newtonian gravity. Users can configure the number of bodies along with their initial mass, position, and velocity, then observe how the system evolves over time.
 
+The project is being developed with an object-oriented, modular architecture to keep the physics engine, visualization, and simulation logic separate. It is currently a work in progress, with additional features and improvements being implemented as development continues.
 
 ## Features
 - Simulate different numbers of bodies
@@ -33,3 +35,16 @@ pip install pygame-ce
 ```
 python main.py
 ```
+
+## Roadmap
+
+- [x] Project structure
+- [x] `Body` class
+- [x] Input validation
+- [x] Unit tests
+- [ ] `Simulation` class as engine
+- [ ] Gravitational force calculations
+- [ ] Real-time visualization with Pygame
+- [ ] User configuration
+- [ ] Performance optimizations
+- [ ] Documentation improvements
