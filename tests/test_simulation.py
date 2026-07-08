@@ -20,21 +20,11 @@ def test_add_body():
     sim.add_body(body)
     assert sim.bodies == [body]
 
+
 def test_add_bodies():
     sim = Simulation()
-    body1 = Body(
-        mass=10,
-        velocity=[0, 0],
-        position=[0, 0],
-        color=(255, 0, 0)
-    )
-    body2 = Body(
-        mass=10,
-        velocity=[0, 0],
-        position=[0, 0],
-        color=(0, 255, 0)
-
-    )
+    body1 = Body(mass=10, velocity=[0, 0], position=[0, 0], color=(255, 0, 0))
+    body2 = Body(mass=10, velocity=[0, 0], position=[0, 0], color=(0, 255, 0))
     sim.add_body(body1, body2)
     assert sim.bodies == [body1, body2]
 
@@ -115,7 +105,7 @@ def test_invalid_body():
     sim = Simulation()
     with pytest.raises(TypeError):
         sim.add_body("this should raise an error")
-        
+
 
 def test_step_position():
     sim = Simulation(0)

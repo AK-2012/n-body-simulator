@@ -113,4 +113,3 @@ def test_color_wrong_length():
             position=[0, 0],
             color=(255, 255),
         )
-
