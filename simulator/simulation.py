@@ -7,8 +7,11 @@ class Simulation:
         self.bodies = [] # contains all Body objects
         self.G = gravitational_constant
 
-    def add_body(self, body: Body):
-        self.bodies.append(body)
+    def add_body(self, *bodies: Body):
+        for body in bodies:
+            if not isinstance(body, Body):
+                raise TypeError("all arguments must be Body objects")
+            self.bodies.append(body)
 
     def remove_body(self, body: Body):
         self.bodies.remove(body)
@@ -28,7 +31,7 @@ class Simulation:
         for body in self.bodies:
             body.acceleration = [0.0, 0.0]
 
-    def _update_motion(self):
+    def _update_accelerations(self):
         for i in range(len(self.bodies)):
             for j in range(i + 1, len(self.bodies)):
                 body1 = self.bodies[i]
@@ -49,7 +52,7 @@ class Simulation:
                 body2.acceleration[0] -= acceleration2 * direction_x
                 body2.acceleration[1] -= acceleration2 * direction_y
 
-    def _update_other_vectors(self, elapsed_time):
+    def _update_motion(self, elapsed_time):
         for body in self.bodies:
             body.velocity[0] += body.acceleration[0] * elapsed_time
             body.velocity[1] += body.acceleration[1] * elapsed_time

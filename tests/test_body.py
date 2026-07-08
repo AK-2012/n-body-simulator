@@ -1,6 +1,7 @@
 import pytest
 from simulator.body import Body
 
+
 def test_valid_body():
     body = Body(
         mass=7,
@@ -14,6 +15,7 @@ def test_valid_body():
     assert body.acceleration == [0.0, 0.0]
     assert body.radius == 2
     assert body.color == (255, 255, 255)
+
 
 def test_invalid_mass_type():
     with pytest.raises(TypeError):
@@ -31,6 +33,7 @@ def test_invalid_mass_type():
             color=(255, 255, 255),
         )
 
+
 def test_negative_mass():
     with pytest.raises(ValueError):
         Body(
@@ -39,6 +42,7 @@ def test_negative_mass():
             position=[0, 0],
             color=(255, 255, 255),
         )
+
 
 def test_velocity_wrong_length():
     with pytest.raises(ValueError):
@@ -56,6 +60,7 @@ def test_velocity_wrong_length():
             color=(255, 255, 255),
         )
 
+
 def test_position_has_non_number():
     with pytest.raises(TypeError):
         Body(
@@ -71,6 +76,7 @@ def test_position_has_non_number():
             position=[True, 0],
             color=(255, 255, 255),
         )
+
 
 def test_invalid_color():
     with pytest.raises(ValueError):
@@ -88,6 +94,7 @@ def test_invalid_color():
             color=(-1, 0, 0),
         )
 
+
 def test_color_not_tuple():
     with pytest.raises(TypeError):
         Body(
@@ -97,6 +104,7 @@ def test_color_not_tuple():
             color=[255, 255, 255],
         )
 
+
 def test_color_wrong_length():
     with pytest.raises(ValueError):
         Body(
@@ -105,3 +113,4 @@ def test_color_wrong_length():
             position=[0, 0],
             color=(255, 255),
         )
+
