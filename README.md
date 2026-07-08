@@ -42,8 +42,8 @@ python main.py
 - [x] `Body` class
 - [x] Input validation
 - [x] Unit tests
-- [ ] `Simulation` class as engine
-- [ ] Gravitational force calculations
+- [x] `Simulation` class as engine
+- [x] Gravitational force calculations
 - [ ] Real-time visualization with Pygame
 - [ ] User configuration
 - [ ] Performance optimizations
