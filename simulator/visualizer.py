@@ -8,6 +8,7 @@ class Visualizer:
         self.height = self._validate_size("height", height)
         self.simulation = simulation
 
+    @staticmethod
     def _validate_size(self, name, value):  # checks if width/height is valid
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError(f"{name} must be an integer")
