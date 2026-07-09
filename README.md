@@ -16,7 +16,7 @@ The project is being developed with an object-oriented, modular architecture to 
 - Newtonian gravity
 
 ## Limitations
-- Runs in O(n²) time per timestep because each `Body` interacts with every other `Body`, limiting scalability
+- Runs in $O(n²)$ time per timestep because each `Body` interacts with every other `Body`, limiting scalability
 - System's total energy changes over time due to Euler integration accumulating numerical error
 - Simulation is constrained to 2 dimensions
 - Collision detection and handling not implemented
