@@ -12,6 +12,8 @@ The project is being developed with an object-oriented, modular architecture to 
 - Real-time visualization with Pygame
 - Object-oriented, modular architecture
 - Input validation
+- Euler integration
+- Newtonian gravity
 
 ## Installation
 Clone the repository:
